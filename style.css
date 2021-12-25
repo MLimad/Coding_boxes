@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+/**************** MAIN Code Box ***************/
+
+.code-prog {
+    position: relative;
+    min-width: 600px;
+    background-color: #362222;
+    border-radius: 4px;
+    border-top: 3px solid chartreuse;
+    padding: 10px;
+    margin-bottom: 40px;
+    color: #BBBBBB;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.code-prog::before {
+    content: attr(page);
+    top: -23px;
+    left: 0;
+    -moz-border-left-colors: 0;
+    position: absolute;
+    background-color: chartreuse;
+    min-width: 50px;
+    padding: 3px 10px;
+    color: #362222;
+    border-top-right-radius: 4px;
+    counter-reset: line;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.code-prog:nth-child(1):after {
+    content: "\f13b";
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    right: 1%;
+    color:red;
+    padding: 10px 5px;
+    font-size: 20px;
+    
+}
+
+
+.code-prog:nth-child(2):after {
+    content: "\f13c";
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    right: 1%;
+    color:violet;
+    padding: 10px 5px;
+}
+
+
+code {
+    display: inline-block;
+    width: 90%;
+    margin-left: -8%;
+}
+
+code:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+code:before {
+    counter-increment: line;
+    content: counter(line);
+    position: absolute;
+    left: 5%;
+
+}
+
+
+/**************** HTML Code Box ***************/
+
+.code-prog .tags-html {
+    color: steelblue;
+}
+
+.code-prog .attr-html {
+    color: yellowgreen;
+}
+
+.code-prog .value-html {
+    color: peru;
+}
+
+.code-prog .comment-html {
+    color: darkkhaki;
+
+}
+
+/**************** CSS Code Box ***************/
+
+
+.code-prog .class-css {
+    color: yellowgreen;
+}
+
+
+.code-prog .attr-css {
+    color: skyblue;
+}
+
+
+.code-prog .val-css {
+    color: indianred;
+}
+
+.code-prog .comment-css {
+    color: darkkhaki;
+
+}
